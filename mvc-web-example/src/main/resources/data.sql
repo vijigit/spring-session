@@ -1,0 +1,13 @@
+INSERT INTO application (application_id, app_name, description, owner) VALUES (1, 'CDAR','Data Proving application', 'CDAR Team');
+INSERT INTO application (application_id, app_name, description, owner) VALUES (2, 'IPM','Innovation Performance Management', 'Raj Radhakrishnan');
+INSERT INTO application (application_id, app_name, description, owner) VALUES (3, 'CDM','Catalog Data Management', 'CDM Team');
+INSERT INTO application (application_id, app_name, description, owner) VALUES (4, 'OGRDS','An application used to code items ', 'Vallavan');
+INSERT INTO application (application_id, app_name, description, owner) VALUES (5, 'NES','Nielsen Enrichment Studio', 'Hendrik');
+INSERT INTO release (release_id, description, release_date) VALUES (1,'Q1 Release Containing High Priority Bugs', '2030-02-14');
+INSERT INTO release (release_id, description, release_date) VALUES (2,'Q2 Release Containing High Priority Enhancements', '2030-05-27');
+INSERT INTO release (release_id, description, release_date) VALUES (3,'Q3 Release Containing Bugs', '2030-09-14');
+INSERT INTO release (release_id, description, release_date) VALUES (4,'Q4 Release Containing Enhancements', '2030-12-10');
+INSERT INTO ticket (id, title, description, application_id, status) VALUES (1, 'Sort Feature','Add the ability to sort tickets by severity',1,'OPEN');
+INSERT INTO ticket (id, title, description, application_id, status) VALUES (2, 'Search Feature','Add the ability to search by invoice date',4,'IN PROGRESS');
+INSERT INTO ticket (id, title, description, application_id, release_id, status) VALUES (3, 'Audit','Add the ability to audit by year',5,1,'CLOSED');
+INSERT INTO ticket (id, title, description, application_id, status) VALUES (4, 'Booking Feature','Add the ability to book tickets online',3,'OPEN');

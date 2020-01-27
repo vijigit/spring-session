@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+ 
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Add Employee</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+</head>
+ 
+<body>
+    <div class="container my-5">
+        <h3> Add Application</h3>
+        <div class="card">
+            <div class="card-body">
+                <div class="col-md-10">
+                    <form action="#" th:action="@{/applications/create}" th:object="${application}"
+                                                                       method="post">
+                        <div class="row">
+                         <div class="form-group col-md-8">
+                                <label for="id" class="col-form-label">id</label> 
+                                <input type="text" th:field="*{id}" class="form-control"
+                                            id="id" placeholder="id" />
+                            </div>
+                            <div class="form-group col-md-8">
+                                <label for="name" class="col-form-label">Application Name</label> 
+                                <input type="text" th:field="*{name}" class="form-control"
+                                            id="name" placeholder="Application Name" />
+                            </div>
+                            <div class="form-group col-md-8">
+                                <label for="description" class="col-form-label">Description</label> 
+                                <input type="text" th:field="*{description}" class="form-control"
+                                            id="description" placeholder="Description" />
+                            </div>
+                            <div class="form-group col-md-8">
+                                <label for="owner" class="col-form-label">Owner</label> 
+                                <input type="text" th:field="*{owner}" class="form-control"
+                                            id="owner" placeholder="Owner" />
+                            </div>
+ 
+                            <div class="col-md-6">
+                                <input type="submit" class="btn btn-primary" value=" Submit ">
+                            </div>
+ 
+     
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+ 
+</html>
